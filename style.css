@@ -9,8 +9,8 @@
 
 .wrap{
     width: 1100px;
-    height: 800px;
-    background-color: white;
+    height:auto;
+    background-color:white;
     margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 0px;
@@ -21,22 +21,121 @@ header {
 	height: 100px;
 }
 
+/* estilo para quitar la viñeta a las listas */	
+.sin_vineta {
+	list-style:none;
+	}
+
+
+
+/* ESTILOS PARA EL MENU DE NAVEGACION */
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;/* le quita subrayado al vinculo */
+}
+
+.menu_horizontal {
+	width: 1100px;
+	height: 40px;
+	background-color: #8e3ead;
+}
+
+.menu_horizontal ul li a {
+	display: block;
+	width: 275px;
+	height: 40px;
+	background-color: #f04388;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	text-transform: uppercase;
+	font-family:"Lilita One"
+}
+
+.menu_horizontal ul li a :link {
+	background-color: #180d6d;
+}
+
+.menu_horizontal ul li a:hover {
+	background-color:  #6a0e7c;
+	color:#000;
+	font-weight: bold;
+}
+
+
+
+
+.contenido_uno{
+	height: 500px;
+	width: 1100px;
+	background-color:white;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+}
+
 h1{
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Lilita One";
+    color: darkviolet;
+    font-size: 40px;
+    margin: 20px;
   }
 
   p{
-    
+    font-family: "Quicksand";
+    font-size: 25px;
+    margin: 20px;
   }
 
 .photo {
-max-width: 300px;
-height: 400px;
-float:right;   
+height: 250px;
+width: auto;
+float:right;
+margin: 20px;
 }
 
+.contenido_dos{
+  height: 500px;
+	width: 1100px;
+	background-color:white;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+
+}
+
+.contenido_tres{
+  height: auto;
+	width: 1100px;
+	background-color:white;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+
+
+}
+
+.photos_habilidades{
+  height: 250px;
+  float: left;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.contenido_cuatro{
+  height: auto;
+	width: 1100px;
+	background-color:white;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+}
 
 .icon_1{
     float: right;

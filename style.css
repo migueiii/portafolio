@@ -14,6 +14,7 @@
     margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 0px;
+
 }
 
 header {
@@ -30,44 +31,58 @@ header {
 
 /* ESTILOS PARA EL MENU DE NAVEGACION */
 
-a {
-	color: #FFFFFF;
-	text-decoration: none;/* le quita subrayado al vinculo */
-}
+
 
 .menu_horizontal {
 	width: 1100px;
 	height: 40px;
 	background-color: #8e3ead;
+	
+}
+
+
+a {
+	color: #FFFFFF;
+	list-style:none;
+	text-decoration: none;/* le quita subrayado al vinculo */
+	
 }
 
 .menu_horizontal ul li a {
 	display: block;
-	width: 275px;
+	width: 267px;
 	height: 40px;
-	background-color: #f04388;
-	float: left;
+	background-color: #ffffffda;
+	float:left;
 	text-align: center;
 	line-height: 40px;
 	text-transform: uppercase;
-	font-family:"Lilita One"
+	font-family:"Lilita One";
+	text-decoration: none;/* le quita subrayado al vinculo */
+	color: #891c9a;
+
+
 }
 
 .menu_horizontal ul li a :link {
-	background-color: #180d6d;
+	background-color: #ffffff;
 }
 
 .menu_horizontal ul li a:hover {
 	background-color:  #6a0e7c;
-	color:#000;
+	color:#ffffff;
 	font-weight: bold;
 }
 
 
 
 
+
+
+
+
 .contenido_uno{
-	height: 500px;
+	height: auto;
 	width: 1100px;
 	background-color:white;
 	margin-left: 10px;
@@ -85,7 +100,7 @@ h1{
 
   p{
     font-family: "Quicksand";
-    font-size: 25px;
+    font-size: 20px;
     margin: 20px;
   }
 
@@ -97,14 +112,19 @@ margin: 20px;
 }
 
 .contenido_dos{
-  height: 500px;
 	width: 1100px;
+	height:auto;
 	background-color:white;
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-top: 10px;
 	float: right;
+}
 
+.proyecto_uno{
+	float: right;
+	width: 25%;
+	height: auto;
 }
 
 .contenido_tres{

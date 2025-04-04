@@ -18,7 +18,7 @@
 }
 
 header {
-	width: 1100px;
+	width: 100%;
 	height: 100px;
 }
 
@@ -34,7 +34,7 @@ header {
 
 
 .menu_horizontal {
-	width: 1100px;
+	width: 100%;
 	height: 40px;
 	background-color: #8e3ead;
 	
@@ -50,7 +50,7 @@ a {
 
 .menu_horizontal ul li a {
 	display: block;
-	width: 267px;
+	width: 25%;
 	height: 40px;
 	background-color: #ffffffda;
 	float:left;
@@ -121,11 +121,37 @@ margin: 20px;
 	float: right;
 }
 
+.ilustraciones{
+	float:right;
+	margin: .4%;
+	cursor: pointer;
+	transition: 2s;
+}
+.ilustraciones:hover{
+	transform: scale(1.1);
+	transition: 2s;
+}
+
+.modelados{
+	float: right;
+	margin: .4%;
+	cursor: pointer;
+	transition: 2s;	
+}
+
+
+.modelados:hover{
+	transform: scale(1.1);
+	transition: 2s;
+}
+
 .proyecto_uno{
 	float: right;
-	width: 25%;
+	width: 35%;
 	height: auto;
 }
+
+
 
 .contenido_tres{
   height: auto;

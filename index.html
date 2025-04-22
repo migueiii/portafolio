@@ -1,239 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-    </style>
+<html lang="es">
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-  </style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Miguel" />
+  <meta name="description" content="Brief description" />
+  <meta property="og:title" content="Your Page Title" />
+  <meta property="og:description" content="Brief description" />
+  <meta property="og:image" content="/some-image.png" />
+  <meta property="og:url" content="/this-page.html" />
+  <meta property="og:site_name" content="Your Site Name" />
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-  </style>
+  <title>Mi portafolio</title>
 
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <head>
-    <title>My portfolio</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
 
-    <meta name="author" content="Miguel" />
-    <meta name="description" content="Brief description" />
+<body class="fondo">
 
-    <meta property="og:title" content="Your Page Title" />
-    <meta property="og:description" content="Brief description" />
-    <meta property="og:image" content="/some-image.png" />
-    <meta property="og:url" content="/this-page.html" />
-    <meta property="og:site_name" content="Your Site Name" />
+  <div class="wrap pt-5">
+    <!-- Header -->
+    <header class="text-center py-4">
+      <h1><a href="index.html" class="text-decoration-none text-dark">MIGUEL SÁNCHEZ</a></h1>
+    </header>
 
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- importar bootstrap  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- fin importacion bootstrap  -->
-  </head>
-
-  <body class="fondo">
-
-    <div class="wrap">
-      <header> 
-        <a href="index.html" target="_self"> <img src="img/HEADER.gif" alt=""></a>
-
-      </header>
-
-
-      <nav class="menu_horizontal">
-        <ul class="sin_vineta">
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8e3ead;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bienvenidxs</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       
-        <li><a href="#seccion1">Sobre Mí</a></li>
-        <li><a href="#seccion2">Proyectos</a></li>
-        <li><a href="#seccion3">Habilidades</a></li>
-        <li><a href="#seccion4">Contacto</a></li>
-        
-          
-        </ul>
-      
-      
-      
-      </nav>
-
-      
-      <!-- tipografia de google pacifico  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  
-      <!-- tipografia de google  quicksand-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@570&display=swap" rel="stylesheet">
-      
-      <!-- tipografia de google lilita -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-
-      </nav>
-
-
-  
-     <nav class="contenido_uno">
-
-       <!-- Sección 1 -->
-       <section id="seccion1">
-    
-
-      <img 
-     class="photo" 
-     src="img/PicsArt_02-24-11.51.17.png"
-     />
-     <h1> Sobre Mí</h1>
-     
-     
-     <p> Mi nombre es Miguel Sánchez, soy un estudiante de diseño de la UAM Cuajimalpa.
-      Tengo 23 años, me gusta tejer, el volley y caminar.
-      Empece en el Diseño en el 2017, cuando ingrese al Cetis 11 "Escuela Nacional de Artes Gráficas". 
-      
-
-      </p>
-    
-     </section>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#seccion1">Sobre Mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seccion2">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seccion3">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seccion4">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <nav class="contenido_dos">
-       <!-- Sección 2 -->
-       <section id="seccion2">
-    
-     
-      <h1> Proyectos </h1>
-    
-      <p> Ilustraciones </p>
-      <img class="ilustraciones"
-      src="img/ilustracion_1.png"/>
+    <!-- Sección 1 - Sobre Mí -->
+    <section id="seccion1" class="contenido_uno">
+      <img class="img-fluid float-end me-3 mb-3 photo" src="img/PicsArt_02-24-11.51.17.png" alt="Foto de Miguel">
+      <h1>Sobre Mí</h1>
+      <p>Mi nombre es Miguel Sánchez, soy un estudiante de diseño de la UAM Cuajimalpa. Tengo 23 años, me gusta tejer, el volley y caminar. Empecé en el Diseño en 2017, cuando ingresé al Cetis 11 "Escuela Nacional de Artes Gráficas".</p>
+    </section>
 
-      <img class="ilustraciones"
-      src="img/ilustracion_2.png"/>
-
-      <img class="ilustraciones"
-      src="img/ilustracion_3.png">
-
-      <img class="ilustraciones"
-      src="img/ilustracion_4.png">
-
+    <!-- Sección 2 - Proyectos -->
+    <section id="seccion2" class="contenido_dos">
+      <h1>Proyectos</h1>
+      <p>Ilustraciones</p>
+      <img class="ilustraciones" src="img/ilustracion_1.png" alt="Ilustración 1">
+      <img class="ilustraciones" src="img/ilustracion_2.png" alt="Ilustración 2">
+      <img class="ilustraciones" src="img/ilustracion_3.png" alt="Ilustración 3">
+      <img class="ilustraciones" src="img/ilustracion_4.png" alt="Ilustración 4">
       <p>Modelado 3D</p>
+      <img class="modelados" src="img/render_1.png" alt="Render 1">
+      <img class="modelados" src="img/render_3.png" alt="Render 3">
+      <img class="modelados" src="img/render_2.png" alt="Render 2">
+      <img class="modelados" src="img/render_4.png" alt="Render 4">
+      <img class="proyecto_uno" src="img/proyecto_uno.png" alt="Proyecto 1">
+    </section>
 
-      <img class="modelados"
-      src="img/render_1.png">
+    <!-- Sección 3 - Habilidades -->
+    <section id="seccion3" class="contenido_tres">
+      <h1>Habilidades</h1>
+      <p>Herramientas Digitales</p>
+      <img class="photos_habilidades" src="img/photoshop.png" alt="Photoshop">
+      <img class="photos_habilidades" src="img/illustrator.png" alt="Illustrator">
+      <img class="photos_habilidades" src="img/indesingn.png" alt="InDesign">
+      <img class="photos_habilidades" src="img/lightroom.png" alt="Lightroom">
+      <img class="photos_habilidades" src="img/after_effects.png" alt="After Effects">
+      <img class="photos_habilidades" src="img/premiere_pro.png" alt="Premiere Pro">
+      <img class="photos_habilidades" src="img/autocad.png" alt="AutoCAD">
+      <img class="photos_habilidades" src="img/blender.png" alt="Blender">
+      <img class="photos_habilidades" src="img/solidworks.png" alt="SolidWorks">
+    </section>
 
-      <img class="modelados"
-      src="img/render_3.png">
-
-      <img class="modelados"
-      src="img/render_2.png">
-
-      <img class="modelados"
-      src="img/render_4.png">
-
-
-
-
-
-      <img class="proyecto_uno"
-      src="img/proyecto_uno.png"
-      />
-
-     </section>
-
-    </nav>
-
-    <nav class="contenido_tres">
-      <!-- Sección 3-->
-      <section id="seccion3">
-    
-      <h1> Habilidades </h1>
-      <p> Herramientas Digitales</p>
-      <img class="photos_habilidades"
-      src="img/photoshop.png"
-      />
-      <img class="photos_habilidades"
-      src="img/illustrator.png"/>
-
-      <img class="photos_habilidades"
-      src="img/indesingn.png"/>
-
-      <img class="photos_habilidades"
-      src="img/lightroom.png"/>
-
-      <img class="photos_habilidades"
-      src="img/after_effects.png"/>
-
-      <img class="photos_habilidades"
-      src="img/premiere_pro.png"/>
-
-      <img class="photos_habilidades"
-      src="img/autocad.png"/>
-
-      <img class="photos_habilidades"
-      src="img/blender.png"/>
-
-      <img class="photos_habilidades"
-      src="img/solidworks.png"/>
-      
-     </section>
-    </nav>
-     
-
-    <nav class="contenido_cuatro"> 
-      <!-- Sección 4 -->
-      <section id="seccion4">
-    
+    <!-- Sección 4 - Contacto -->
+    <section id="seccion4" class="contenido_cuatro">
       <h1>Contacto</h1>
-
-      <!-- icono de insta -->
       <a href="https://www.instagram.com/miguel.sm.mx/">
-      <svg 
-      class="icon_1"
-      xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"
-      >
-      <a/>
+        <svg class="icon_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.83 0 5.55.01 4.7.05c-.85.04-1.43.17-1.94.37a3.9 3.9 0 0 0-1.42.92A3.9 3.9 0 0 0 .42 2.76c-.2.51-.34 1.09-.37 1.94C.01 5.55 0 5.83 0 8c0 2.17.01 2.44.05 3.3.04.85.17 1.43.37 1.94.2.52.48.97.92 1.42.45.45.89.72 1.42.92.51.2 1.09.34 1.94.37.86.04 1.13.05 3.3.05s2.44-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37a3.9 3.9 0 0 0 1.42-.92 3.9 3.9 0 0 0 .92-1.42c.2-.51.34-1.09.37-1.94.04-.86.05-1.13.05-3.3s-.01-2.44-.05-3.3c-.04-.85-.17-1.43-.37-1.94a3.9 3.9 0 0 0-.92-1.42 3.9 3.9 0 0 0-1.42-.92c-.51-.2-1.09-.34-1.94-.37C10.44.01 10.17 0 8 0z"/>
+        </svg>
+      </a>
+    </section>
 
-        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-      </svg>
-      <!-- icono de facebook -->
-      <svg 
-      class="icon_1"
-      xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-      </svg>
-      <!-- icono de whats -->
-      <svg 
-      class="icon_1"
-      xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-      </svg>
-      <!-- icono de mail -->
-      <svg 
-      class="icon_1"
-      xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-      </svg>
-     </section>
-    </div>
-  </nav>
-    
-    <!-- <button class="btn--primary">This is a button</button> -->
-  </body>
-</html>
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-light mt-5">
+      <p class="mb-0">&copy; 2025 Miguel Sánchez - Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- Tu

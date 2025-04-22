@@ -1,191 +1,264 @@
-/* importar bootstrap */
+/* Importar Bootstrap */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.fondo{
-    background-color: hsla(327, 100%, 50%, 1);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1111 1111' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at 0% 99%, hsla(11, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(327, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(236, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(206, 100%, 9%, 1) 0%, transparent 150%);
-    background-blend-mode: overlay, normal, normal, normal, normal;
-}
-
-.wrap{
-    width: 1100px;
-    height:auto;
-    background-color:white;
-    margin-left:auto;
-	margin-right:auto;
-	margin-bottom: 0px;
-
+.wrap {
+    width: 95%;
+    max-width: 1200px;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
 }
 
 header {
-	width: 100%;
-	height: 100px;
+    width: 100%;
+    height: 10vh;
 }
 
-/* estilo para quitar la viñeta a las listas */	
+/* Estilo para quitar la viñeta a las listas */
 .sin_vineta {
-	list-style:none;
-	}
-
-
-
-/* ESTILOS PARA EL MENU DE NAVEGACION */
-
-
-
-.menu_horizontal {
-	width: 100%;
-	height: 40px;
-	background-color: #8e3ead;
-	
+    list-style: none;
 }
 
+/* Estilos para el menú de navegación */
+.menu_horizontal {
+    width: 100%;
+    height: 8vh;
+    background-color: #8e3ead;
+    text-align: right;
+}
 
-a {
-	color: #FFFFFF;
-	list-style:none;
-	text-decoration: none;/* le quita subrayado al vinculo */
-	
+.menu_horizontal ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu_horizontal ul li {
+    margin-left: 2%;
 }
 
 .menu_horizontal ul li a {
-	display: block;
-	width: 25%;
-	height: 40px;
-	background-color: #ffffffda;
-	float:left;
-	text-align: center;
-	line-height: 40px;
-	text-transform: uppercase;
-	font-family:"Lilita One";
-	text-decoration: none;/* le quita subrayado al vinculo */
-	color: #891c9a;
-
-
+    display: block;
+    padding: 10px 15px;
+    background-color: #ffffffda;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lilita One";
+    text-decoration: none;
+    color: #891c9a;
+    position: relative;
+    transition: color 0.3s ease; /* Añadimos transición solo para el color */
 }
 
-.menu_horizontal ul li a :link {
-	background-color: #ffffff;
+/* Subrayado animado en hover */
+.menu_horizontal ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;  /* Color del subrayado */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
 
 .menu_horizontal ul li a:hover {
-	background-color:  #6a0e7c;
-	color:#ffffff;
-	font-weight: bold;
+    color: #ffffff;             /* Cambia el color del texto */
 }
 
-
-
-
-
-
-
-
-.contenido_uno{
-	height: auto;
-	width: 1100px;
-	background-color:white;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	float: right;
+.menu_horizontal ul li a:hover::before {
+    transform: scaleX(1);       /* Muestra el subrayado al hacer hover */
+    transform-origin: bottom left;
 }
 
-h1{
+/* Contenido de la página */
+.contenido_uno, .contenido_dos, .contenido_tres, .contenido_cuatro {
+    width: 95%;
+    background-color: white;
+    margin: 10px auto;
+    float: none;
+}
+
+h1 {
     font-family: "Lilita One";
     color: darkviolet;
-    font-size: 40px;
+    font-size: 4vw;
     margin: 20px;
-  }
+}
 
-  p{
+p {
     font-family: "Quicksand";
-    font-size: 20px;
+    font-size: 2vw;
     margin: 20px;
-  }
+}
 
 .photo {
-height: 250px;
-width: auto;
-float:right;
-margin: 20px;
+    height: auto;
+    width: 40%;
+    float: right;
+    margin: 20px;
 }
 
-.contenido_dos{
-	width: 1100px;
-	height:auto;
-	background-color:white;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	float: right;
+.ilustraciones, .modelados {
+    float: right;
+    margin: 1%;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.ilustraciones{
-	float:right;
-	margin: .4%;
-	cursor: pointer;
-	transition: 2s;
-}
-.ilustraciones:hover{
-	transform: scale(1.1);
-	transition: 2s;
+.ilustraciones:hover, .modelados:hover {
+    transform: scale(1.1);
 }
 
-.modelados{
-	float: right;
-	margin: .4%;
-	cursor: pointer;
-	transition: 2s;	
+.proyecto_uno {
+    float: right;
+    width: 45%;
+    height: auto;
 }
 
-
-.modelados:hover{
-	transform: scale(1.1);
-	transition: 2s;
+.photos_habilidades {
+    height: auto;
+    width: 15vw;
+    float: left;
+    padding: 10px;
+    margin: 10px;
 }
 
-.proyecto_uno{
-	float: right;
-	width: 35%;
-	height: auto;
-}
-
-
-
-.contenido_tres{
-  height: auto;
-	width: 1100px;
-	background-color:white;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	float: right;
-
-
-}
-
-.photos_habilidades{
-  height: 250px;
-  float: left;
-  padding: 10px;
-  margin: 10px;
-
-}
-
-.contenido_cuatro{
-  height: auto;
-	width: 1100px;
-	background-color:white;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	float: right;
-}
-
-.icon_1{
+.icon_1 {
     float: right;
     color: rgb(226, 43, 174);
     margin: 10px;
 }
 
+/* Diseño responsivo */
+@media screen and (max-width: 768px) {
+    .menu_horizontal ul li a {
+        width: 30%;
+        line-height: 7vh;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    .photo {
+        width: 60%;
+    }
+
+    .ilustraciones, .modelados {
+        width: 40%;
+        margin: 2%;
+    }
+
+    .proyecto_uno {
+        width: 80%;
+    }
+
+    .photos_habilidades {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Para pantallas de menos de 480px */
+    header {
+        height: 12vh;
+    }
+
+    .menu_horizontal ul li a {
+        width: 100%;
+        line-height: 8vh;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    p {
+        font-size: 5vw;
+    }
+
+    .photo {
+        width: 80%;
+    }
+
+    .ilustraciones, .modelados {
+        width: 80%;
+        margin: 5%;
+    }
+
+    .proyecto_uno {
+        width: 100%;
+    }
+
+    .photos_habilidades {
+        width: 50%;
+    }
+}
+
+/* Diseño para pantallas grandes (>1200px) */
+@media screen and (min-width: 1201px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 1.8vw;
+    }
+
+    .photo {
+        width: 30%;
+    }
+
+    .ilustraciones, .modelados {
+        width: 20%;
+        margin: 1%;
+    }
+
+    .proyecto_uno {
+        width: 40%;
+    }
+
+    .photos_habilidades {
+        width: 12vw;
+    }
+
+    .contenido_uno, .contenido_dos, .contenido_tres, .contenido_cuatro {
+        margin-top: 40px;
+    }
+}
+
+.navbar {
+    background-color: #8e3ead !important;
+}
+
+.navbar-brand {
+    font-family: "Lilita One";
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-link {
+    font-family: "Lilita One";
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand,
+.nav-link {
+    font-family: "Lilita One", cursive;
+}
+
+.nav-link:hover {
+    color: #000000 !important;
+    font-weight: bold;
+}

@@ -1,264 +1,402 @@
-/* Importar Bootstrap */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+/* Importar Bootstrap desde CDN */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+
+/* ====== GENERAL ====== */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background-color: hsla(161, 77%, 83%, 1);
+    background-image: radial-gradient(circle at 7% 81%, hsla(172, 91%, 91%, 1) 16%, transparent 53%),
+                      radial-gradient(circle at 5% 1%, hsla(238, 76%, 61%, 1) 7%, transparent 84%),
+                      radial-gradient(circle at 39% 52%, hsla(137, 93%, 64%, 1) 6%, transparent 68%),
+                      radial-gradient(circle at 11% 29%, hsla(201, 97%, 75%, 1) 8%, transparent 74%),
+                      radial-gradient(circle at 90% 50%, hsla(106, 94%, 89%, 1) 2%, transparent 85%);
+}
 
 .wrap {
     width: 95%;
     max-width: 1200px;
-    height: auto;
     background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
+    margin: auto;
 }
 
+/* ====== HEADER ====== */
 header {
     width: 100%;
-    height: 10vh;
+    background-color: hsla(161, 77%, 83%, 1);
+    background-image: radial-gradient(circle at 7% 81%, hsla(172, 91%, 91%, 1) 16%, transparent 53%),
+                      radial-gradient(circle at 5% 1%, hsla(238, 76%, 61%, 1) 7%, transparent 84%),
+                      radial-gradient(circle at 39% 52%, hsla(137, 93%, 64%, 1) 6%, transparent 68%),
+                      radial-gradient(circle at 11% 29%, hsla(201, 97%, 75%, 1) 8%, transparent 74%),
+                      radial-gradient(circle at 90% 50%, hsla(106, 94%, 89%, 1) 2%, transparent 85%);
 }
 
-/* Estilo para quitar la viñeta a las listas */
-.sin_vineta {
-    list-style: none;
+header h1 {
+    font-size: 2.5rem;
+    font-family: "Lilita One", cursive;
+    color: hsla(197, 92%, 60%, 1);
+    animation: fadeIn 1s ease-out;
 }
 
-/* Estilos para el menú de navegación */
-.menu_horizontal {
-    width: 100%;
-    height: 8vh;
-    background-color: #8e3ead;
-    text-align: right;
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.menu_horizontal ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
+@media screen and (min-width: 1201px) {
+    header h1 { font-size: 5rem; }
 }
 
-.menu_horizontal ul li {
-    margin-left: 2%;
-}
-
-.menu_horizontal ul li a {
-    display: block;
-    padding: 10px 15px;
-    background-color: #ffffffda;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Lilita One";
-    text-decoration: none;
-    color: #891c9a;
-    position: relative;
-    transition: color 0.3s ease; /* Añadimos transición solo para el color */
-}
-
-/* Subrayado animado en hover */
-.menu_horizontal ul li a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;  /* Color del subrayado */
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.menu_horizontal ul li a:hover {
-    color: #ffffff;             /* Cambia el color del texto */
-}
-
-.menu_horizontal ul li a:hover::before {
-    transform: scaleX(1);       /* Muestra el subrayado al hacer hover */
-    transform-origin: bottom left;
-}
-
-/* Contenido de la página */
+/* ====== CONTENIDO GENERAL ====== */
 .contenido_uno, .contenido_dos, .contenido_tres, .contenido_cuatro {
     width: 95%;
     background-color: white;
     margin: 10px auto;
-    float: none;
 }
 
 h1 {
-    font-family: "Lilita One";
-    color: darkviolet;
+    font-family: "Lilita One", cursive;
+    color: rgb(0, 0, 0);
     font-size: 4vw;
     margin: 20px;
 }
 
 p {
-    font-family: "Quicksand";
-    font-size: 2vw;
+    font-family: "Quicksand", sans-serif;
+    font-size: 3vw;
     margin: 20px;
+    color: #333;
+}
+
+/* ====== SECCIÓN SOBRE MÍ ====== */
+.contenido_uno .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .photo {
+    width: 30%;
+    max-width: 200px;
     height: auto;
-    width: 40%;
-    float: right;
-    margin: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.ilustraciones, .modelados {
-    float: right;
-    margin: 1%;
+.text-content {
+    flex: 1;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .photo {
+        width: 60%;
+        margin: 0 auto 20px auto;
+    }
+
+    .contenido_uno .d-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ====== GALERÍAS DE IMÁGENES ====== */
+.ilustraciones, .modelados, .fotos {
+    width: 22%;
+    max-width: 280px;
+    margin: 1.5%;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    display: inline-block;
 }
 
-.ilustraciones:hover, .modelados:hover {
+.vectores {
+    width: 25%;
+    max-width: 220px;
+    margin: 1.5%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.ilustraciones:hover, .modelados:hover, .fotos:hover, .vectores:hover {
     transform: scale(1.1);
 }
 
-.proyecto_uno {
-    float: right;
-    width: 45%;
-    height: auto;
+/* ====== RESPONSIVE GALERÍAS ====== */
+@media screen and (max-width: 992px) {
+    .ilustraciones, .modelados, .fotos, .vectores {
+        width: 45%;
+        margin: 2%;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    .ilustraciones, .modelados, .fotos, .vectores {
+        width: 90%;
+        margin: 5% auto;
+        display: block;
+    }
+}
+
+.playeras-grid {
+    display: grid;  /* Usamos grid para organizar las imágenes en filas y columnas */
+    grid-template-columns: repeat(2, 1fr); /* Crea tres columnas iguales */
+    gap: 40px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra las imágenes dentro de las celdas */
+    margin: 20px 0; /* Añadimos un margen para separar la sección de otras partes del contenido */
+}
+
+.playeras, .playeras_uno {
+    width: 100%; /* Las imágenes ocuparán el 100% de su celda */
+    max-width: 250px; /* Limita el tamaño máximo de las imágenes */
+    height: auto; /* Mantener la relación de aspecto */
+    border-radius: 10px; /* Esquinas redondeadas */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover */
+.playeras:hover, .playeras_uno:hover {
+    transform: scale(1.1); /* Hace que las imágenes se agranden al pasar el mouse */
+}
+
+
+/* Contenedor para las imágenes */
+.playeras-container {
+    display: flex; /* Usamos flexbox para alinear las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Asegura que las imágenes estén alineadas verticalmente */
+    gap: 20px; /* Añade espacio entre las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten si es necesario */
+}
+
+/* Estilo para las imágenes */
+.playeras_uno {
+    width: 30%; /* O ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Esquinas redondeadas opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las imágenes */
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .playeras-unos {
+        width: 80%; /* En pantallas pequeñas las imágenes ocuparán más espacio */
+    }
+}
+
+
+/* ====== HABILIDADES ====== */
 .photos_habilidades {
-    height: auto;
-    width: 15vw;
-    float: left;
+    width: 20vw;
     padding: 10px;
     margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para transformaciones y opacidad */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
 }
 
-.icon_1 {
-    float: right;
-    color: rgb(226, 43, 174);
-    margin: 10px;
+/* Efecto de animación cuando se pasa el mouse */
+.photos_habilidades:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    opacity: 0.8; /* Disminuye la opacidad para darle un efecto de "desvanecimiento" */
 }
 
-/* Diseño responsivo */
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Inicia desde una posición más baja */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Si quieres que cada imagen tenga un retraso diferente, puedes hacerlo así: */
+.photos_habilidades:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.photos_habilidades:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.photos_habilidades:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
+#seccion4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap; /* Esto permite que los iconos se acomoden en pantallas pequeñas */
+  }
+  
+  .icon_1 {
+    width: 60px;
+    height: 60px;
+    fill: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon_1:hover {
+    transform: scale(1.2);
+  }
+  
+  .email-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .email-text {
+    display: none; /* El texto está oculto por defecto */
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .email-link:hover .email-text {
+    display: block; /* El texto aparece cuando el icono es hoverizado */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    #seccion4 {
+      flex-direction: column;
+      align-items: center; /* Alinea todos los elementos al centro */
+      gap: 20px;
+    }
+  
+    .icon_1 {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  
+
+/* Hover especial */
+.hover-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.hover-container img {
+    width: 100%;
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hover-container:hover .hover-text {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
     .menu_horizontal ul li a {
         width: 30%;
         line-height: 7vh;
     }
-
-    h1 {
-        font-size: 6vw;
-    }
-
-    p {
-        font-size: 4vw;
-    }
-
-    .photo {
-        width: 60%;
-    }
-
-    .ilustraciones, .modelados {
-        width: 40%;
-        margin: 2%;
-    }
-
-    .proyecto_uno {
-        width: 80%;
-    }
-
-    .photos_habilidades {
-        width: 30%;
-    }
+    h1 { font-size: 6vw; }
+    p { font-size: 4vw; }
+    .ilustraciones, .modelados, .fotos { width: 40%; margin: 2%; }
+    .proyecto_uno { width: 80%; }
+    .photos_habilidades { width: 30%; }
 }
 
 @media screen and (max-width: 480px) {
-    /* Para pantallas de menos de 480px */
-    header {
-        height: 12vh;
-    }
-
+    header { height: 12vh; }
     .menu_horizontal ul li a {
         width: 100%;
         line-height: 8vh;
     }
-
-    h1 {
-        font-size: 8vw;
-    }
-
-    p {
-        font-size: 5vw;
-    }
-
-    .photo {
-        width: 80%;
-    }
-
-    .ilustraciones, .modelados {
-        width: 80%;
-        margin: 5%;
-    }
-
-    .proyecto_uno {
-        width: 100%;
-    }
-
-    .photos_habilidades {
-        width: 50%;
-    }
+    h1 { font-size: 8vw; }
+    p { font-size: 5vw; }
+    .photo { width: 80%; }
+    .ilustraciones, .modelados, .fotos { width: 80%; margin: 5%; }
+    .proyecto_uno { width: 100%; }
+    .photos_habilidades { width: 50%; }
 }
 
-/* Diseño para pantallas grandes (>1200px) */
 @media screen and (min-width: 1201px) {
-    h1 {
-        font-size: 3vw;
-    }
-
-    p {
-        font-size: 1.8vw;
-    }
-
-    .photo {
-        width: 30%;
-    }
-
-    .ilustraciones, .modelados {
-        width: 20%;
-        margin: 1%;
-    }
-
-    .proyecto_uno {
-        width: 40%;
-    }
-
-    .photos_habilidades {
-        width: 12vw;
-    }
-
+    h1 { font-size: 3vw; }
+    p { font-size: 1.8vw; }
+    .photo { width: 30%; }
+    .ilustraciones, .modelados, .fotos { width: 20%; margin: 1%; }
+    .proyecto_uno { width: 40%; }
+    .photos_habilidades { width: 12vw; }
     .contenido_uno, .contenido_dos, .contenido_tres, .contenido_cuatro {
         margin-top: 40px;
     }
 }
 
+/* Navbar Bootstrap */
 .navbar {
-    background-color: #8e3ead !important;
-}
-
-.navbar-brand {
-    font-family: "Lilita One";
-    font-size: 1.5rem;
-    color: white;
-}
-
-.nav-link {
-    font-family: "Lilita One";
-    color: white !important;
-    text-transform: uppercase;
+    background-color: hsla(161, 77%, 83%, 1);
+    background-image: radial-gradient(circle at 7% 81%, hsla(172, 91%, 91%, 1) 16%, transparent 53%),
+                      radial-gradient(circle at 5% 1%, hsla(238, 76%, 61%, 1) 7%, transparent 84%),
+                      radial-gradient(circle at 39% 52%, hsla(137, 93%, 64%, 1) 6%, transparent 68%),
+                      radial-gradient(circle at 11% 29%, hsla(201, 97%, 75%, 1) 8%, transparent 74%),
+                      radial-gradient(circle at 90% 50%, hsla(106, 94%, 89%, 1) 2%, transparent 85%);
 }
 
 .navbar-brand,
 .nav-link {
     font-family: "Lilita One", cursive;
+    color: black !important;
 }
 
 .nav-link:hover {
-    color: #000000 !important;
+    color: #292ff3 !important;
     font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 }
